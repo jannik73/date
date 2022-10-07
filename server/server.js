@@ -6,7 +6,7 @@ const db = require("./db");
 const cors = require("cors");
 
 const app = express();
-app.use(express.static('../client/build'));
+
 
 app.use(morgan("dev"));
 app.use(express.json());
