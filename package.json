@@ -2,7 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "6.14.5"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "postinstall": "ng build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
