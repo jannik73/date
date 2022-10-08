@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { RestaurantsContextProvider } from "./context/RestaurantsContext";
+//import { RestaurantsContextProvider } from "./context/RestaurantsContext";
 import { PersonsContextProvider } from "./context/PersonsContext";
 import Home from "./routes/Home";
 

@@ -102,7 +102,7 @@ app
 //    }
 //  });
 
-  app.post(`/api/v1/persons/add`, async (req, res) => {
+  app.post("/api/v1/persons/add", async (req, res) => {
     const { date, firstname, age, relationship, city, dreamdate, interest, song, contact  } = req.body[0];
     //const { id } = req.params;
     try {
