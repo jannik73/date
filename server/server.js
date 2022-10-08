@@ -29,21 +29,21 @@ app
       console.log(error);
     }
   })
-  //.post(async (req, res, next) => {
-  //  const { name, location, price_range } = req.body;
-  //  try {
-  //    const results = await db.query(
-  //      "INSERT INTO restaurants(name, location, price_range) VALUES($1, $2, $3) returning *",
-  //      [name, location, price_range]
-  //    );
-  //    res.status(200).json({
-  //      status: "success",
-  //      data: results.rows[0],
-  //    });
-  //  } catch (error) {
-  //    console.log(error);
-  //  }
-  //});
+  .post(async (req, res, next) => {
+    const { date, firstname, age, relationship, city, dreamdate, interest, song, contact  } = req.body;
+    try {
+      const results = await db.query(
+        "INSERT INTO dating(date, firstname, age, relationship, city, dreamdate, interest, song, contact) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *",
+        [ date, firstname, age, relationship, city, dreamdate, interest, song, contact ] 
+      );
+      res.status(200).json({
+        status: "success",
+        data: results.rows[0],
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
 //app
 //  .route("/api/v1/persons/:id")

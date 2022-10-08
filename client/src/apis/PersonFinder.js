@@ -1,15 +1,15 @@
 import axios from "axios";
 import axiosRetry from "axios-retry";
 
-const RestaurantFinder = axios.create({
+const PersonFinder = axios.create({
   baseURL:
     process.env.NODE_ENV !== "production"
       ? "http://localhost:7000/api/v1/persons"
-      : "https://get-to-know-you.herokuapp.com/api/v1/persons",
+      : "https://www.get-to-know-you.herokuapp.com/api/v1/persons",
       
   timeout: 5000,
 });
 
-axiosRetry(RestaurantFinder, { retries: 3 });
+axiosRetry(PersonFinder, { retries: 3 });
 
-export default RestaurantFinder;
+export default PersonFinder;
