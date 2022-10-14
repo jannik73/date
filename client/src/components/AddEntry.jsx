@@ -164,7 +164,7 @@ function AddEntry() {
         setDreamdate(newDreamdate);
         console.log(newDreamdate)
 
-        PersonFinder.post('/add', newDreamdate)
+        PersonFinder.post('/', newDreamdate)
           .then(function (response) {
             addPerson(response.data.data);
             //hier die ganzen setInputs("")
