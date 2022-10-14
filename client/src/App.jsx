@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import { RestaurantsContextProvider } from "./context/RestaurantsContext";
 import { PersonsContextProvider } from "./context/PersonsContext";
 import Home from "./routes/Home";
+import Test from "./routes/Testseite";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
       <div className="container">
         <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Test} />
           </Switch>
         </Router>
       </div>
