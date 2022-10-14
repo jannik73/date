@@ -157,7 +157,7 @@ function AddEntry() {
   
     const submit = (e) => {
       e.preventDefault();
-      if (checked) {
+      //if (checked) {
         const num = Number(ageinput)
         if (Number.isInteger(num) && num > 0) {
           const newDreamdate = [{ date: new Date().toLocaleDateString(), firstname: nameinput, age: parseInt(ageinput), relationship: relationshipinput.length === 0 ? null : relationshipinput, city: cityinput.length === 0 ? null : cityinput, dreamdate: dateinput.length === 0 ? null : dateinput, interest: interestinput.length === 0 ? null : interestinput, song: songinput.length === 0 ? null : songinput, contact: contactinput.length === 0 ? null : contactinput }];
@@ -185,10 +185,10 @@ function AddEntry() {
           alert("age is no number")
         }
         
-      }
-      else {
-        alert("Um die Daten zu sichern, bitte den Haken markieren.");
-      }
+      //}
+      //else {
+      //  alert("Um die Daten zu sichern, bitte den Haken markieren.");
+      //}
   
     }
   
