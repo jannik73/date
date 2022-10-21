@@ -3,6 +3,7 @@ const express = require("express");
 const PORT = process.env.PORT || 8080;
 const morgan = require("morgan");
 const db = require("./db");
+const path = require("path");
 const cors = require("cors");
 
 const app = express();
@@ -126,7 +127,7 @@ app
 
   // All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.js'));
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 app.listen(PORT, () => console.log("Magic happening on PORT", +PORT));

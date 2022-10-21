@@ -8,6 +8,7 @@ const pool = new Pool({
   ssl: isProduction ? { rejectUnauthorized: false } : false,
 });
 
+console.log(connectionString);
 module.exports = {
   query: (text, params) => pool.query(text, params),
 };

@@ -1,7 +1,7 @@
 
-import PersonFinder from "../apis/PersonFinder";
+//import PersonFinder from "../apis/PersonFinder";
 import React, { useContext, useState, useEffect } from "react";
-import { PersonsContext } from "../context/PersonsContext";
+//import { PersonsContext } from "../context/PersonsContext";
 
 import '../App.css'
 import "../styles.css";
@@ -12,7 +12,7 @@ import MagicButton from '../components/MagicButton';
 
 function AddEntry() {
   
-    const {addPerson} = useContext(PersonsContext)
+    //const {addPerson} = useContext(PersonsContext)
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenDisclamer, setIsOpenDisclaimer] = useState(false);
     const [person, setPerson] = useState(false);
@@ -121,57 +121,46 @@ function AddEntry() {
     //#endregion
   
   
-    function getPerson() {
-      fetch('http://localhost:5000/add')
-        .then(response => {
-          return response.text();
-        })
-        .then(data => {
-          setPerson(data);
-        });
-    }
-  
-  
-    function createPerson(newDreamdate) {
-      fetch('https://get-to-know-people.herokuapp.com/add', {
-      //fetch('postgres://nnbnbrvxjwdczd:ccec70e88e0b8ffacae1474671f3f4e8a59ef3182235926e981c8f65114d494f@ec2-99-81-137-11.eu-west-1.compute.amazonaws.com:5432/ddd3kfvic872om/add', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newDreamdate),
-      })
-        .then(response => {
-          return response.text();
-        })
-        .then(data => {
-          alert(data);
-          //getPerson();
-        });
-    }
     //wenn sich etwas ändert??, in dem fall Todos
     useEffect(() => {
       setItem(JSON.stringify(dreamdate));
       //localStorage.setItem("items", JSON.stringify(dreamdate));
     }, [dreamdate]);
   
-    const submit = (e) => {
+    const submit = async (e) => {
       e.preventDefault();
       if (checked) {
         const num = Number(ageinput)
         if (Number.isInteger(num) && num > 0) {
           const newDreamdate = [{ date: new Date().toLocaleDateString(), firstname: nameinput, age: parseInt(ageinput), relationship: relationshipinput.length === 0 ? null : relationshipinput, city: cityinput.length === 0 ? null : cityinput, dreamdate: dateinput.length === 0 ? null : dateinput, interest: interestinput.length === 0 ? null : interestinput, song: songinput.length === 0 ? null : songinput, contact: contactinput.length === 0 ? null : contactinput }];
         setDreamdate(newDreamdate);
-        console.log(newDreamdate)
+        //console.log(newDreamdate);
 
-        PersonFinder.post('/add', newDreamdate)
-          .then(function (response) {
-            addPerson(response.data.data);
-            //hier die ganzen setInputs("")
-          })
-          .catch(function (error) {
-            console.log(error);
+        try {
+          //proxy is only use in development so it will be ignored in production
+          //so if there is no http://localhost:5000 then by default it is going to use heroku domain
+          //remember this heroku app is just our server serving the build static content and also holding the restful api
+    
+          //https://pern-todo-app-demo.herokuapp.com/todos
+          const response = await fetch("/add", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newDreamdate),
           });
+    
+          window.location = "/";
+        } catch (err) {
+          console.error(err.message);
+        }
+
+        //PersonFinder.post('/add', newDreamdate)
+        //  .then(function (response) {
+        //    addPerson(response.data.data);
+        //    //hier die ganzen setInputs("")
+        //  })
+        //  .catch(function (error) {
+        //    console.log(error);
+        //  });
         //createPerson(newDreamdate);
         //setNameinput("");
         //setRelationshipinput("");

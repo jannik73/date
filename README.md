@@ -1,1 +1,7 @@
-Codebase for tutorial [Deploy PERN Fullstack App on Heroku and Netlify (Automatic Deploy)](https://levelup.gitconnected.com/deploy-pern-fullstack-app-on-heroku-and-netlify-automatic-deploy-9b61ac6a254e) on Medium
+# pern-deploy-tutorial
+
+tutorial video => https://www.youtube.com/watch?v=ZJxUOOND5_A&t=2154s
+
+
+<img src="https://i.ytimg.com/vi/ZJxUOOND5_A/maxresdefault.jpg" />
+
