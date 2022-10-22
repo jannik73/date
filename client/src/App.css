@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -44,10 +45,11 @@
   background-color: rgb(240, 239, 239);
 }
 
-.mybutton:hover{
+.mybutton:hover {
   border: 1px solid rgb(146, 146, 146);
   background-color: rgb(220, 220, 220);
 }
+
 .mymodal {
   position: fixed;
   top: 50%;
@@ -70,10 +72,12 @@
   padding: 4px;
   background-color: rgb(240, 239, 239);
 }
-.mybutton2:hover{
+
+.mybutton2:hover {
   border: 1px solid rgb(146, 146, 146);
   background-color: rgb(220, 220, 220);
 }
+
 .mybutton3 {
   position: fixed;
   top: 10%;
@@ -83,7 +87,8 @@
   padding: 4px;
   background-color: rgb(240, 239, 239);
 }
-.mybutton3:hover{
+
+.mybutton3:hover {
   border: 1px solid rgb(146, 146, 146);
   background-color: rgb(220, 220, 220);
   border: 1px solid #ccc;
@@ -101,7 +106,8 @@
   padding: 4px;
   background-color: rgb(240, 239, 239);
 }
-.mybutton4:hover{
+
+.mybutton4:hover {
   border: 1px solid rgb(146, 146, 146);
   background-color: rgb(220, 220, 220);
 }
@@ -148,6 +154,7 @@
   margin-bottom: 5px;
   cursor: pointer;
 }
+
 .e-dialog .e-dlg-content {
   color: red;
   font-size: 10px;
@@ -179,6 +186,31 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mysidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #232323;
+  transition: .5s ease;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
+.opennavbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .ReactModal__Overlay {

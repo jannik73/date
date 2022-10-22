@@ -10,6 +10,8 @@ import sunrise from '../pictures/sunrise.jpg'
 import '../components/MagicButton'
 import MagicButton from '../components/MagicButton';
 
+import Header from "../components/Header";
+
 function AddEntry() {
   
     //const {addPerson} = useContext(PersonsContext)
@@ -184,6 +186,7 @@ function AddEntry() {
   
     return (
       <div className="App">
+        
         <div>
           <h1>Do you want to hang out?</h1>
           <img className="myphoto" src={sunrise} alt=""></img>
