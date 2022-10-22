@@ -187,7 +187,6 @@ function AddEntry() {
   
     return (
       <div className="App">
-        <Header></Header>
           <img className="myphoto" src={collage} alt=""></img>
           <h1>Do you want to hang out?</h1>
           {render1 &&
@@ -228,7 +227,7 @@ function AddEntry() {
           closeTimeoutMS={500}
         >
           <dev style={{ display: "flex" }} >
-            <button className="mybutton" style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleModal}>X</button>
+            <button className="mybutton" style={{ marginLeft: "auto", padding: '1px', height: '25px', width: '25px' }} onClick={toggleModal}>X</button>
           </dev>
           <h2 className=''>Your Dating application</h2>
           <div>
@@ -335,7 +334,7 @@ function AddEntry() {
           closeTimeoutMS={500}>
   
   <dev style={{ display: "flex" }} >
-            <button className="mybutton" style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleDisclaimer}>X</button>
+            <button className="mybutton" style={{ marginLeft: "auto"}} onClick={toggleDisclaimer}>X</button>
           </dev>
   
             <dev>

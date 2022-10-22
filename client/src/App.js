@@ -20,7 +20,7 @@ function App() {
 }
 
   return (
-    <div className="container">
+    <div className="App">
       
       
       <SideNav width = {wid} closeNav={closeSidenav}></SideNav>

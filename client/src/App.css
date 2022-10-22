@@ -38,6 +38,8 @@
   }
 }
 
+
+
 .mybutton {
   border: 1px solid #ccc;
   margin: 5px;
@@ -119,6 +121,10 @@
   text-decoration: underline;
   border: 0px solid transparent;
   font-size: small;
+}
+
+.myheader {
+  background-color: #ccc;
 }
 
 .myphoto {
@@ -209,9 +215,10 @@
 }
 .opennavbar{
   position: fixed;
-  top: 0;
+  top: 200;
   left: 0;
   width: 100%;
+  text-align: left;
 }
 
 .ReactModal__Overlay {
