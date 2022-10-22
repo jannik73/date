@@ -335,7 +335,7 @@ function AddEntry() {
           closeTimeoutMS={500}>
   
   <dev style={{ display: "flex" }} >
-            <button style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleDisclaimer}>X</button>
+            <button className="mybutton" style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleDisclaimer}>X</button>
           </dev>
   
             <dev>
