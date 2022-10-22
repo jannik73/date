@@ -4,7 +4,7 @@ import React, { useContext, useState, useEffect } from "react";
 //import { PersonsContext } from "../context/PersonsContext";
 
 import '../App.css'
-import "../styles.css";
+//import "../styles.css";
 import Modal from "react-modal";
 import sunrise from '../pictures/sunrise.jpg'
 import '../components/MagicButton'
@@ -190,7 +190,7 @@ function AddEntry() {
           <h3>Maybe at the beach?</h3>
         </div>
           {render1 &&
-          <MagicButton text={notext} idx="1" flag={open1} onClick={toggleButton2} >
+          <MagicButton text={notext} idx="1" flag={open1} onClick={toggleButton2} className="mybutton">
           </MagicButton>
         }
         {render2 &&
@@ -205,7 +205,7 @@ function AddEntry() {
           <MagicButton text={notext} idx="4" flag={open4} onClick={toggleButton1} className='mybutton4'>
           </MagicButton>
         }
-          <button className='bg-gray-200 text-black m-5 p-2'
+          <button className='mybutton'
           style={{
             margin: 2
           }}
@@ -227,7 +227,7 @@ function AddEntry() {
           closeTimeoutMS={500}
         >
           <dev style={{ display: "flex" }} >
-            <button style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleModal}>X</button>
+            <button className="mybutton" style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleModal}>X</button>
           </dev>
           <h2 className=''>Deine Datingbewerbung</h2>
           <div>
