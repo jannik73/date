@@ -7,6 +7,7 @@ import '../App.css'
 //import "../styles.css";
 import Modal from "react-modal";
 import sunrise from '../pictures/sunrise.jpg'
+import collage from '../pictures/Collage.png'
 import '../components/MagicButton'
 import MagicButton from '../components/MagicButton';
 
@@ -186,12 +187,9 @@ function AddEntry() {
   
     return (
       <div className="App">
-        
-        <div>
+        <Header></Header>
+          <img className="myphoto" src={collage} alt=""></img>
           <h1>Do you want to hang out?</h1>
-          <img className="myphoto" src={sunrise} alt=""></img>
-          <h3>Maybe at the beach?</h3>
-        </div>
           {render1 &&
           <MagicButton text={notext} idx="1" flag={open1} onClick={toggleButton2} className="mybutton">
           </MagicButton>
