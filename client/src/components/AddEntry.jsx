@@ -232,71 +232,71 @@ function AddEntry() {
           <dev style={{ display: "flex" }} >
             <button className="mybutton" style={{ marginLeft: "auto", padding: '1px' }} onClick={toggleModal}>X</button>
           </dev>
-          <h2 className=''>Deine Datingbewerbung</h2>
+          <h2 className=''>Your Dating application</h2>
           <div>
             <table>
               <tbody>
                 <tr className='mytablerows'>
                   <td>
-                    Dein Name:
+                    Your Name:
                   </td>
-                  <td>Dein Alter:</td>
+                  <td>Your Age:</td>
                 </tr>
                 <tr className='mytablerows'>
                   <td>
-                    <input onChange={changeTextName} value={nameinput} placeholder='Name eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                    <input onChange={changeTextName} value={nameinput} placeholder='enter your name' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
                   </td>
                   <td>
-                    <input onChange={changeTextAge} value={ageinput} placeholder='Alter eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
-                  </td>
-                </tr>
-  
-                <tr className='mytablerows'>
-                  <td>
-                    Dein Beziehungsstatus:
-                  </td>
-                  <td>
-                    Dein Wohnort:
-                  </td>
-                </tr>
-                <tr className='mytablerows'>
-                  <td>
-                    <input onChange={changeTextRelationship} value={relationshipinput} placeholder='Beziehungstatus eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
-                  </td>
-                  <td>
-                    <input onChange={changeTextCity} value={cityinput} placeholder='Wohnort eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                    <input onChange={changeTextAge} value={ageinput} placeholder='enter your age' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
                   </td>
                 </tr>
   
                 <tr className='mytablerows'>
                   <td>
-                    Was sind deine Interessen?
+                    Your Relationshipstatus:
                   </td>
                   <td>
-                    Welcher Song berührt dich am meisten?
+                    Your City:
+                  </td>
+                </tr>
+                <tr className='mytablerows'>
+                  <td>
+                    <input onChange={changeTextRelationship} value={relationshipinput} placeholder='enter your relationshipstatus' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                  </td>
+                  <td>
+                    <input onChange={changeTextCity} value={cityinput} placeholder='enter your city' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
                   </td>
                 </tr>
   
                 <tr className='mytablerows'>
                   <td>
-                    <input onChange={changeTextInterest} value={interestinput} placeholder='Interessen eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                    What are your interests?
                   </td>
                   <td>
-                    <input onChange={changeTextSong} value={songinput} placeholder='Song eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                    Which song touches you the most?
                   </td>
                 </tr>
   
                 <tr className='mytablerows'>
-                  <td>Deine Vorstellung von deinem Traumdate:</td>
+                  <td>
+                    <input onChange={changeTextInterest} value={interestinput} placeholder='enter e.g. hobbies etc.' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                  </td>
+                  <td>
+                    <input onChange={changeTextSong} value={songinput} placeholder='enter song' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                  </td>
+                </tr>
   
-                  <td>Wie willst Du gerne Kontakt haben?</td>
+                <tr className='mytablerows'>
+                  <td>Your expectation of a perfect Date:</td>
+  
+                  <td>How should we get in contact?</td>
                 </tr>
                 <tr className='mytablerows'>
                   <td>
-                    <input onChange={changeTextDate} value={dateinput} placeholder='Ideen eintragen' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                    <input onChange={changeTextDate} value={dateinput} placeholder='enter your dreamdate' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
                   </td>
                   <td>
-                    <input onChange={changeTextContact} value={contactinput} placeholder='zum Beispiel Instagram' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
+                    <input onChange={changeTextContact} value={contactinput} placeholder='enter e.g your username of instagram' type="text" style={{ borderColor: 'rgba(0,0,0,0.2)' }} className='mytextfield'></input>
                   </td>
                 </tr>
   
@@ -308,12 +308,11 @@ function AddEntry() {
                         checked={checked}
                         onChange={handleChange}
                       />
-                      Ich willige hiermit ein, dass die
-                      eingegebenene Daten gespeichert werden dürfen.
+                      I hereby agree that the data entered may be stored.
                     </label>
                   </td>
                   <td style={{ display: "flex" }}>
-                    <input style={{ marginLeft: "auto" }} type="submit" value="Abgeben" onClick={submit} ></input>
+                    <input style={{ marginLeft: "auto" }} type="submit" value="Submit" onClick={submit} ></input>
                   </td>
                 </tr>
                 <tr className='mytablerows'>
@@ -342,7 +341,7 @@ function AddEntry() {
           </dev>
   
             <dev>
-              Diese Seite dient lediglich zur Unterhaltung. Jeder ist selbst verantwortlich, welche Daten die Person preis geben möchte. Es wird generell keine Haftung übernommen! :{")"}
+            This site is for entertainment purposes only. Everyone is responsible for what data the person wants to disclose. There is generally no liability assumed! :{")"}
             </dev>
   
           </Modal>
