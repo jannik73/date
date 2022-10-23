@@ -64,7 +64,6 @@ app
     
     //const { id } = req.params;
     try {
-      console.log("TEST");
       const results = await db.query(
         "INSERT INTO dating(date, firstname, age, relationship, city, dreamdate, interest, song, contact) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *",
         [ date, firstname, age, relationship, city, dreamdate, interest, song, contact ] 

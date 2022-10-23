@@ -1,7 +1,5 @@
 import React from "react"
-//import AddRestaurant from "../components/AddRestaurant"
 import AddEntry from "../components/AddEntry"
-//import RestaurantList from "../components/RestaurantList"
 import Header from "../components/Header";
 import {SplitScreen} from '../layouts/SplitScreen'
 
