@@ -202,6 +202,7 @@ function AddEntry() {
           margin: 2
         }}
         onClick={toggleDisclaimer}> Disclaimer </button>
+        <h6>don't you dare press the no button</h6>
 
       <Modal
         isOpen={isOpen}
