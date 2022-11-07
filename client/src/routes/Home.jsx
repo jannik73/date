@@ -6,7 +6,7 @@ import {SplitScreen} from '../layouts/SplitScreen'
 const Home = (props) => {
   return (
     <SplitScreen >
-      <Header text="Welcome to the Love Generator"></Header>
+      <Header text="Welcome to the Best Pickup Site"></Header>
       <AddEntry></AddEntry>
     </SplitScreen>
     
